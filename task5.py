@@ -17,3 +17,9 @@ df.set_index('Date', inplace=True)
 cases_8000 = df['Cases'] > 8000
 print(f'There are {sum(cases_8000)} days with more than 8000 cases')
 print(df[cases_8000])
+
+# Plot bar chart for cases per month
+m_groups = df.groupby(df.index.to_period('M'))
+m.groups['Cases'].sum().plot.bar()
+plt.title('Monthly new cases')
+plt.show()

@@ -14,4 +14,5 @@ with open('Heathrow.txt', 'r') as f:
         
 print(temperatures)
 
-print(f'{np.min(temperatures)=}')
+print(f'{np.min(temperatures)=}, {np.max(temperatures)=}')
+print(f'{np.mean(temperatures)=}, {np.median(temperatures)=}')

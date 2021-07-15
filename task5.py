@@ -13,3 +13,7 @@ print(df.sample(10))
 
 df['Date'] = pd.to_datetime(df['Date'])
 df.set_index('Date', inplace=True)
+
+cases_8000 = df['Cases'] > 8000
+print(f'There are {sum(cases_8000)} days with more than 8000 cases')
+print(df[cases_8000])

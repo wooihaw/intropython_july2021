@@ -13,3 +13,5 @@ with open('Heathrow.txt', 'r') as f:
         temperatures.append(float(f.readline().strip()))
         
 print(temperatures)
+
+print(f'{np.min(temperatures)=}')

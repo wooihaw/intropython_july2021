@@ -10,4 +10,8 @@ from collections import Counter
 with open('alice.txt', 'r') as f:
     s = f.read()
     
-print(s)
+# print(s)
+t = [c.lower() if c.isalpha() else ' ' for c in s]
+w = ''.join(t)
+allwords = w.split()
+print(allwords)
